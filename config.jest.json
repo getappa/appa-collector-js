@@ -1,0 +1,31 @@
+{
+  "roots": [
+    "tests"
+  ],
+  "moduleDirectories": [
+    "node_modules"
+  ],
+  "testEnvironment": "node",
+  "coverageDirectory": "coverage",
+  "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+  ],
+  "collectCoverageFrom": [
+    "src/**/*.js"
+  ],
+  "coverageReporters": [
+    "html",
+    "lcov"
+  ],
+  "moduleNameMapper": {
+    ".*config.jest.json": "<rootDir>/tests/__mocks__/config.mock.json"
+  },
+  "coverageThreshold": {
+    "global": {
+      "statements": 99,
+      "branches": 99,
+      "functions": 99,
+      "lines": 99
+    }
+  }
+}
