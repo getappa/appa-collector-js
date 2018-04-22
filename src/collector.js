@@ -16,7 +16,7 @@ exports.getTag = (collectorName, processor) => {
 
 exports._check = (val1, val2) => {
     return val1 || val2;
-}
+};
 
 exports.Collector = function (configFile) {
     const parentName = exports._check(this.base, module.parent.filename);

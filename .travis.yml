@@ -3,9 +3,17 @@ node_js:
   - '8'
 cache:
   directories:
-  - node_modules
+    - node_modules
 script:
   - npm run test
   - npm run lint
 after_success:
   - npm run coveralls
+deploy:
+  provider: npm
+  email: guidiego.expgames@gmail.com
+  api_key:
+    secure: RllFBFlNcTJY4tfjjKhCN/NTc/6pmtklOfCbvdZ/X+xY/+AIC4NOKZhYuiXcjs1+I7HAhhKBB+f1YOxKYps8OZgNJfeXfZX71ouJljextpF45hLktGptVZzSm6WA9VexdbpW6PfTy85hh1Jr0GnLqpEPPyjRrfIOu7fdiKI0V7DQAQYwaknXoc25ajKnOtIbTp3QVbJcQPcPW1OGwJSueWRtV4dKxmcdxRN2jtxgSJpieZmO9j0VDcSJx0SF6MqpgtSRP4K1fU48m4kxLLXgUA4V042NLOYa+qYlg0pJ+8KhDKLaV3Pb0595GxvWVNG4euxkqgp0kwC6YTjFzGt2wjYNHJyCE9bSrhOQfiqnHX2sN+gk1PKFtAkUvlvbaEDVM377iFMoWgSTlNSDEcxZ27L/PUYS6eRv9+NtPfsjkLsUGQcL+qEpKPJ4nKhiKIPb+QShbAqu/md9PvaCPIw7LiZkxUYXvEC06xwnu0pJ2gSHHAPrKmLyNzHTh1i68328/seU4uXWy9wJbCazsosj9hWi5RHysy4/2a1jGyx7c+nIiEXwmm8vmW/mX1s3d7ZmASKbCbYp5nvIlZAG8EHRNrzqKRUkFEtVz3Ehj1350w75hMZIoUh3UOtRgBW+LnkwHHPir6jDPEpXlbn2iQfSVLul980DtPuXegiWDwY0ikA=
+  on:
+    tags: true
+    repo: getappa/appa-js

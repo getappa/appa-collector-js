@@ -1,6 +1,6 @@
 {
   "name": "appajs",
-  "version": "0.0.1-test",
+  "version": "1.0.0",
   "description": "Appa util pack for javascript",
   "main": "src/index.js",
   "directories": {
