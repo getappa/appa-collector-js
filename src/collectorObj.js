@@ -6,8 +6,8 @@ module.exports = class CollectorObj {
     send(data) {
         if (Array.isArray(data) && this.schema) {
             data = data.map(this.schema);
-        } else if (typeof data === 'object' && this.schema) {
-            data = this.schema(data);
+        } else if (!Array.isArray(data) && typeof data === 'object') {
+            data = [this.schema ? this.schema(data) : data];
         }
 
         const pdata = JSON.stringify(data);
