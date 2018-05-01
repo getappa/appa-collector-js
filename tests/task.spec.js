@@ -18,6 +18,15 @@ describe('src/task', () => {
         );
     });
 
+    it('should run Task for promise response', () => {
+        const fakeData = 'fakedata';
+        const task = Task(() => Promise.resolve(fakeData));
+
+        return task.then(() => {
+            expect(process.stdout.write).toHaveBeenCalledWith(fakeData);
+        })
+    });
+
     it('should run Task for non json response', () => {
         const fakeData = 'foobar';
         Task(() => fakeData);
