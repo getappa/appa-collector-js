@@ -1,7 +1,7 @@
 const stdout = (data, isObj = false) => {
     const response = isObj ? JSON.stringify(data) : data;
     process.stdout.write(response);
-}
+};
 
 module.exports = (callback) => {
     const strData = process.argv[2] || '{}';
@@ -10,10 +10,10 @@ module.exports = (callback) => {
     let response = callback(data);
 
     if (typeof response === 'object' && response.then) {
-        return response.then((data) => stdout(data, typeof data === 'object'))
+        return response.then((data) => stdout(data, typeof data === 'object'));
     } else if (typeof response === 'object') {
-        return stdout(response, true)
+        return stdout(response, true);
     }
 
-    return stdout(response)
+    return stdout(response);
 };
