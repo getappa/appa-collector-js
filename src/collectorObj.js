@@ -11,7 +11,7 @@ module.exports = class CollectorObj {
         }
 
         const pdata = JSON.stringify(data);
-        process.stdout.write(`!AppaTag(${this.tag})${pdata}`);
+        process.stdout.write(`!AppaTag(${this.tag})${pdata}\n`);
     }
 
     addSchema(schema) {

@@ -2,7 +2,7 @@ const CollectorObj = require('../src/collectorObj');
 
 const fakeTag = 'test'
 const fakeSchema = (data) => ({ x: data.x * 2 });
-const template = data => `!AppaTag(${fakeTag})[${data}]`
+const template = data => `!AppaTag(${fakeTag})[${data}]\n`
 
 describe('src/collectorObj', () => {
     let collector;
